@@ -6,8 +6,23 @@
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/decenter2021/quadruple-tank-setup/blob/readme/LICENSE)
 [![DOI:[not_published_yet]](https://zenodo.org/badge/DOI/not_published_yet.svg)](https://doi.org/not_published_yet.svg)
 
-## 🎯 Features
+<img src="https://user-images.githubusercontent.com/40807922/163567003-0c99b331-ad43-42da-af84-5637b5629d2c.png" width="100%" /> |   <img src="https://user-images.githubusercontent.com/40807922/163566465-bf311f1e-8831-4145-b541-65d9046de89c.png" width="100%" /> 
+:-------------------------:|:-------------------------:
+CAD model             |  Physical implementation
 
+***
+## 🎯 Features
+- User-friendly dedicated **MATLAB/Simulink** interface with a personal computer<br>
+- Seamless shift between a **numeric simulation** and the **interface** with the real experimental plant<br>
+- **Inexpensive** materials and allow for a **fast assembly** <br>
+- **Open-source** <br>
+  - CAD models
+  - Technical drawings
+  - Wiring schematics
+  - PCB design
+  - MATLAB/Simulink interface
+  - Assembly tutorials
+- Several application **examples**
 
 ***
 ## 🚀 Index
@@ -23,12 +38,13 @@
 
 ## 💡 Description
 <p align="justify">
-is tecnhically described in 
+The Quadruple-Tank Setup is tecnhically described in 
+</p>
+<p align="justify">
+<a href="">Pedroso, L., Batista, P. (2022) Reproducible Low-cost Flexible Quadruple-Tank Process Experimental Setup for Control Educators, Practitioners, and Researchers [not published yet]</a>
 </p>
 
-<a href="">Pedroso, L., Batista, P. [not published yet]</a>
-  
-If you use X, reference the publication above.
+If you use this repository, reference the publication above.
 
 X allows to:
 - 
