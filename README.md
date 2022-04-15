@@ -10,6 +10,9 @@
 :-------------------------:|:-------------------------:
 CAD model             |  Physical implementation
 
+
+<iframe width="1424" height="645" src="https://www.youtube.com/embed/Tk9IJJCzURs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ***
 ## 🎯 Features
 - User-friendly dedicated **MATLAB/Simulink** interface with a personal computer<br>
@@ -75,8 +78,6 @@ This repository is currently maintained by Leonardo Pedroso (<a href="mailto:leo
 
 Description             |  Video
 :-------------------------:|:-------------------------:
-
-
 
 ***
 
