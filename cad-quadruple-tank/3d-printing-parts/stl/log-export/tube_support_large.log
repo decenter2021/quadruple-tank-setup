@@ -1,0 +1,30 @@
+Solid Edge Translation to STL
+Date: Sunday,July 25,2021 12:57PM
+Source File:C:\Users\Leonardo Pedroso\Documents\cad-quadruple-tank\3d-printing-parts\se-parts\tube_support_large.par
+Source System: SOLID EDGE
+
+Hardware:
+Processor: Intel(R) Core(TM) i5-5250U CPU @ 1.60GHz
+Operating System: Windows 10
+Installed Memory: 3.9 GB
+
+Software Information:
+Parasolid Version: 32.1.222
+PSBodyshop Version: 32.1.94
+Solid Edge Version: 221.00.00.114 x64
+
+STL Export Options:
+Output File Format:BINARY
+Export Displayed Parts:Off
+structureOption: Monolithic
+Export Units:Inch
+Export Tolerance Value:0.050000
+Export Tolerance Type:Custom
+Export Surface Plane Angle Value:0.523599
+
+Translation progress:
+Phase 1 of 2 Fetching Parasolid information...
+Phase 2 of 2 Translating Parasolid to foreign data types...
+Number of STL file Created : 1
+Translation process completed
+Time required to translate:00 : 00 : 01

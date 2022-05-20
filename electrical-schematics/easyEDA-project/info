@@ -1,0 +1,669 @@
+{
+  "uuid": "579b76b31636e292527e4aa7cdd7196f",
+  "path": "Offline/schematics_quadruple_tank_setup",
+  "name": "schematics_quadruple_tank_setup",
+  "content": "",
+  "created_at": "2021-07-25 20:53:38",
+  "updated_at": "2021-08-26 10:34:22",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "dd2c424620ebb61f9dad799e5d9e27c2",
+      "title": "pcb_schematic",
+      "description": "",
+      "docType": "1",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "1f661dc77e1541ef86c6036f51a31e2b": 1,
+        "9900276970c045968b41a8d9db21b679": 4,
+        "5ae8abab3ac7b2d6a3f7440de1a35612": 2,
+        "815aa05d622d482087834ee050c9ff15": 2,
+        "f367c9043b9d696814add546ab641d32": 3,
+        "beb7660708a0499fac6a060cc3851aa2": 2,
+        "60688086a667456a902a19b83d8e618d": 1
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "Header-Female-2.54_1x10",
+          2,
+          "HDR-TH_10P-P2.54-V-F",
+          "ADC0,ADC1",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "BOOMELE",
+            "BOM_Manufacturer Part": "2.54mm 1*10P Straight Female header Gold-plated",
+            "BOM_Supplier Part": "C35445",
+            "BOM_LCSC Assembly": "Yes",
+            "BOM_Paste Type": "expand",
+            "puuid": "17eda053266b4cdca86c67384ca2b6c2",
+            "uuid": "5ae8abab3ac7b2d6a3f7440de1a35612"
+          }
+        ],
+        [
+          "Header-Female-2.54_1x6",
+          3,
+          "HDR-TH_6P-P2.54-V-F",
+          "DATA_BUTTON,DATA_DRIVER_0,DATA_DRIVER_1",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "BOOMELE",
+            "BOM_Manufacturer Part": "Female header 1*6p",
+            "BOM_Supplier Part": "C40877",
+            "BOM_LCSC Assembly": "Yes",
+            "BOM_Paste Type": "expand",
+            "puuid": "84f1ed3c8ee94504833047c26b4d21a2",
+            "uuid": "f367c9043b9d696814add546ab641d32"
+          }
+        ],
+        [
+          "IN_14VDC",
+          1,
+          "DC-IN-TH_DC-005-20A",
+          "DC01",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "HRO",
+            "BOM_Manufacturer Part": "DC-005-20A",
+            "BOM_Supplier Part": "C136744",
+            "BOM_LCSC Assembly": "Yes",
+            "BOM_Paste Type": "expand",
+            "puuid": "e27e43a87233424da496ee2ae00cee25",
+            "uuid": "60688086a667456a902a19b83d8e618d"
+          }
+        ],
+        [
+          "Header-Female-2.54_1x15",
+          2,
+          "HDR-TH_15P-P2.54-V",
+          "NANO_0_14,NANO_15_29",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "Ckmtw",
+            "BOM_Manufacturer Part": "220S-1*15P H=8.5MM Ytype Gold-plated",
+            "BOM_Supplier Part": "C124408",
+            "BOM_LCSC Assembly": "Yes",
+            "BOM_Paste Type": "expand",
+            "puuid": "9113d2c51a594771a42e03539b691133",
+            "uuid": "815aa05d622d482087834ee050c9ff15"
+          }
+        ],
+        [
+          "PWR_DRIVER01",
+          1,
+          "HDR-TH_3P-P2.54-V-M",
+          "PWR_DRIVER_0",
+          {
+            "BOM_Supplier Part": "C146243",
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "Boom Precision Elec",
+            "BOM_Manufacturer Part": "Header-Female-2.54_1x3",
+            "BOM_Paste Type": "expand",
+            "puuid": "5c0be672313e4206a41dd5398a02f108",
+            "uuid": "beb7660708a0499fac6a060cc3851aa2"
+          }
+        ],
+        [
+          "Header-Female-2.54_1x3",
+          1,
+          "HDR-TH_3P-P2.54-V-M",
+          "PWR_DRIVER_1",
+          {
+            "BOM_Supplier Part": "C146243",
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "Boom Precision Elec",
+            "BOM_Manufacturer Part": "Header-Female-2.54_1x3",
+            "BOM_Paste Type": "expand",
+            "puuid": "5c0be672313e4206a41dd5398a02f108",
+            "uuid": "beb7660708a0499fac6a060cc3851aa2"
+          }
+        ],
+        [
+          "L7805CP",
+          1,
+          "TO-220FPAB-3_L10.4-W4.6-P2.54-T",
+          "U4",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C283396",
+            "BOM_Manufacturer": "STMicroelectronics",
+            "BOM_Manufacturer Part": "L7805CP",
+            "puuid": "c96297339c4946d188c4bd2d3145f8e6",
+            "uuid": "1f661dc77e1541ef86c6036f51a31e2b"
+          }
+        ],
+        [
+          "2.54-1*4P母",
+          4,
+          "HDR-TH_4P-P2.54-V-F",
+          "WL0,WL1,WL2,WL3",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C2718488",
+            "BOM_Manufacturer": "BOOMELE(博穆精密)",
+            "BOM_Manufacturer Part": "2.54-1*4P母",
+            "puuid": "8f78b31c15d54ef69278fa188fb193ea",
+            "uuid": "9900276970c045968b41a8d9db21b679"
+          }
+        ],
+        [
+          "Quadruple Tank Process Experimental Setup PCB",
+          1,
+          "",
+          "U1",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "",
+            "uuid": "3192319ada844311b89f776a93bd8540"
+          }
+        ],
+        [
+          "Water Level Sensor Tank 1",
+          1,
+          "",
+          "U2",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "",
+            "uuid": "6386287ddf03480fb03bea4ff936e831"
+          }
+        ],
+        [
+          "Water Level Sensor Tank 2",
+          1,
+          "",
+          "U3",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "",
+            "uuid": "6386287ddf03480fb03bea4ff936e831"
+          }
+        ],
+        [
+          "Water Level Sensor Tank 3",
+          1,
+          "",
+          "U5",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "",
+            "uuid": "6386287ddf03480fb03bea4ff936e831"
+          }
+        ],
+        [
+          "Water Level Sensor Tank 4",
+          1,
+          "",
+          "U6",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "",
+            "uuid": "6386287ddf03480fb03bea4ff936e831"
+          }
+        ],
+        [
+          "L298N",
+          2,
+          "",
+          "U7,U8",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "",
+            "uuid": "870ee8f3e083431587972ab89a00f5d7"
+          }
+        ],
+        [
+          "Bistable emergency button",
+          1,
+          "",
+          "U9",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "",
+            "uuid": "0007b1c77f404925a23e666ca7c24a6a"
+          }
+        ],
+        [
+          "100nF 25V",
+          4,
+          "TWO_IO",
+          "U10,U18,U19,U20",
+          {
+            "BOM_Manufacturer Part": "",
+            "puuid": "6ba2ed3d80974d5bb09b8ed07204661c",
+            "uuid": "f4e0b51d28ed4c71868ccccbc617bfad"
+          }
+        ],
+        [
+          "Actuation pump 1",
+          1,
+          "VIBE-MOTOR-10MM",
+          "U14",
+          {
+            "BOM_Manufacturer Part": "",
+            "puuid": "c5b8a3e78af9421ea4f9402e6d23cb52",
+            "uuid": "896098eaa96e450d87a041164f5a7054"
+          }
+        ],
+        [
+          "Actuation pump 2",
+          1,
+          "VIBE-MOTOR-10MM",
+          "U15",
+          {
+            "BOM_Manufacturer Part": "",
+            "puuid": "c5b8a3e78af9421ea4f9402e6d23cb52",
+            "uuid": "896098eaa96e450d87a041164f5a7054"
+          }
+        ],
+        [
+          "Disturbance pump 1",
+          1,
+          "VIBE-MOTOR-10MM",
+          "U16",
+          {
+            "BOM_Manufacturer Part": "",
+            "puuid": "c5b8a3e78af9421ea4f9402e6d23cb52",
+            "uuid": "896098eaa96e450d87a041164f5a7054"
+          }
+        ],
+        [
+          "Disturbance pump 2",
+          1,
+          "VIBE-MOTOR-10MM",
+          "U17",
+          {
+            "BOM_Manufacturer Part": "",
+            "puuid": "c5b8a3e78af9421ea4f9402e6d23cb52",
+            "uuid": "896098eaa96e450d87a041164f5a7054"
+          }
+        ]
+      ],
+      "updateTime": 1627237234,
+      "createTime": 1617100219,
+      "histories": [],
+      "created_at": "2021-03-30 11:30:19",
+      "updated_at": "2021-07-25 19:20:34"
+    },
+    {
+      "uuid": "0ae1ffea7f3164545a7a307a0ddc8b61",
+      "title": "full_schematic",
+      "description": "",
+      "docType": "1",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "6386287ddf03480fb03bea4ff936e831": 4,
+        "870ee8f3e083431587972ab89a00f5d7": 2,
+        "0007b1c77f404925a23e666ca7c24a6a": 1,
+        "f4e0b51d28ed4c71868ccccbc617bfad": 4,
+        "896098eaa96e450d87a041164f5a7054": 4,
+        "b5ed86d39d0a42bc82816ace2cb91361": 1,
+        "3192319ada844311b89f776a93bd8540": 1
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "Header-Female-2.54_1x10",
+          2,
+          "HDR-TH_10P-P2.54-V-F",
+          "ADC0,ADC1",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "BOOMELE",
+            "BOM_Manufacturer Part": "2.54mm 1*10P Straight Female header Gold-plated",
+            "BOM_Supplier Part": "C35445",
+            "BOM_LCSC Assembly": "Yes",
+            "BOM_Paste Type": "expand",
+            "puuid": "17eda053266b4cdca86c67384ca2b6c2",
+            "uuid": "5ae8abab3ac7b2d6a3f7440de1a35612"
+          }
+        ],
+        [
+          "Header-Female-2.54_1x6",
+          3,
+          "HDR-TH_6P-P2.54-V-F",
+          "DATA_BUTTON,DATA_DRIVER_0,DATA_DRIVER_1",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "BOOMELE",
+            "BOM_Manufacturer Part": "Female header 1*6p",
+            "BOM_Supplier Part": "C40877",
+            "BOM_LCSC Assembly": "Yes",
+            "BOM_Paste Type": "expand",
+            "puuid": "84f1ed3c8ee94504833047c26b4d21a2",
+            "uuid": "f367c9043b9d696814add546ab641d32"
+          }
+        ],
+        [
+          "IN_14VDC",
+          1,
+          "DC-IN-TH_DC-005-20A",
+          "DC01",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "HRO",
+            "BOM_Manufacturer Part": "DC-005-20A",
+            "BOM_Supplier Part": "C136744",
+            "BOM_LCSC Assembly": "Yes",
+            "BOM_Paste Type": "expand",
+            "puuid": "e27e43a87233424da496ee2ae00cee25",
+            "uuid": "60688086a667456a902a19b83d8e618d"
+          }
+        ],
+        [
+          "Header-Female-2.54_1x15",
+          2,
+          "HDR-TH_15P-P2.54-V",
+          "NANO_0_14,NANO_15_29",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "Ckmtw",
+            "BOM_Manufacturer Part": "220S-1*15P H=8.5MM Ytype Gold-plated",
+            "BOM_Supplier Part": "C124408",
+            "BOM_LCSC Assembly": "Yes",
+            "BOM_Paste Type": "expand",
+            "puuid": "9113d2c51a594771a42e03539b691133",
+            "uuid": "815aa05d622d482087834ee050c9ff15"
+          }
+        ],
+        [
+          "PWR_DRIVER01",
+          1,
+          "HDR-TH_3P-P2.54-V-M",
+          "PWR_DRIVER_0",
+          {
+            "BOM_Supplier Part": "C146243",
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "Boom Precision Elec",
+            "BOM_Manufacturer Part": "Header-Female-2.54_1x3",
+            "BOM_Paste Type": "expand",
+            "puuid": "5c0be672313e4206a41dd5398a02f108",
+            "uuid": "beb7660708a0499fac6a060cc3851aa2"
+          }
+        ],
+        [
+          "Header-Female-2.54_1x3",
+          1,
+          "HDR-TH_3P-P2.54-V-M",
+          "PWR_DRIVER_1",
+          {
+            "BOM_Supplier Part": "C146243",
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "Boom Precision Elec",
+            "BOM_Manufacturer Part": "Header-Female-2.54_1x3",
+            "BOM_Paste Type": "expand",
+            "puuid": "5c0be672313e4206a41dd5398a02f108",
+            "uuid": "beb7660708a0499fac6a060cc3851aa2"
+          }
+        ],
+        [
+          "L7805CP",
+          1,
+          "TO-220FPAB-3_L10.4-W4.6-P2.54-T",
+          "U4",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C283396",
+            "BOM_Manufacturer": "STMicroelectronics",
+            "BOM_Manufacturer Part": "L7805CP",
+            "puuid": "c96297339c4946d188c4bd2d3145f8e6",
+            "uuid": "1f661dc77e1541ef86c6036f51a31e2b"
+          }
+        ],
+        [
+          "2.54-1*4P母",
+          4,
+          "HDR-TH_4P-P2.54-V-F",
+          "WL0,WL1,WL2,WL3",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C2718488",
+            "BOM_Manufacturer": "BOOMELE(博穆精密)",
+            "BOM_Manufacturer Part": "2.54-1*4P母",
+            "puuid": "8f78b31c15d54ef69278fa188fb193ea",
+            "uuid": "9900276970c045968b41a8d9db21b679"
+          }
+        ],
+        [
+          "Quadruple-Tank Process",
+          1,
+          "",
+          "U1",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "",
+            "uuid": "3192319ada844311b89f776a93bd8540"
+          }
+        ],
+        [
+          "Water Level Sensor Tank 1",
+          1,
+          "",
+          "U2",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "",
+            "uuid": "6386287ddf03480fb03bea4ff936e831"
+          }
+        ],
+        [
+          "Water Level Sensor Tank 2",
+          1,
+          "",
+          "U3",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "",
+            "uuid": "6386287ddf03480fb03bea4ff936e831"
+          }
+        ],
+        [
+          "Water Level Sensor Tank 3",
+          1,
+          "",
+          "U5",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "",
+            "uuid": "6386287ddf03480fb03bea4ff936e831"
+          }
+        ],
+        [
+          "Water Level Sensor Tank 4",
+          1,
+          "",
+          "U6",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "",
+            "uuid": "6386287ddf03480fb03bea4ff936e831"
+          }
+        ],
+        [
+          "L298N",
+          2,
+          "",
+          "U7,U8",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "",
+            "uuid": "870ee8f3e083431587972ab89a00f5d7"
+          }
+        ],
+        [
+          "Bistable Emergency",
+          1,
+          "",
+          "U9",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "",
+            "uuid": "0007b1c77f404925a23e666ca7c24a6a"
+          }
+        ],
+        [
+          "100uF 25V",
+          4,
+          "TWO_IO",
+          "U10,U18,U19,U20",
+          {
+            "BOM_Manufacturer Part": "",
+            "puuid": "6ba2ed3d80974d5bb09b8ed07204661c",
+            "uuid": "f4e0b51d28ed4c71868ccccbc617bfad"
+          }
+        ],
+        [
+          "Actuation pump 1",
+          1,
+          "VIBE-MOTOR-10MM",
+          "U14",
+          {
+            "BOM_Manufacturer Part": "",
+            "puuid": "c5b8a3e78af9421ea4f9402e6d23cb52",
+            "uuid": "896098eaa96e450d87a041164f5a7054"
+          }
+        ],
+        [
+          "Actuation pump 2",
+          1,
+          "VIBE-MOTOR-10MM",
+          "U15",
+          {
+            "BOM_Manufacturer Part": "",
+            "puuid": "c5b8a3e78af9421ea4f9402e6d23cb52",
+            "uuid": "896098eaa96e450d87a041164f5a7054"
+          }
+        ],
+        [
+          "Disturbance pump 1",
+          1,
+          "VIBE-MOTOR-10MM",
+          "U16",
+          {
+            "BOM_Manufacturer Part": "",
+            "puuid": "c5b8a3e78af9421ea4f9402e6d23cb52",
+            "uuid": "896098eaa96e450d87a041164f5a7054"
+          }
+        ],
+        [
+          "Disturbance pump 2",
+          1,
+          "VIBE-MOTOR-10MM",
+          "U17",
+          {
+            "BOM_Manufacturer Part": "",
+            "puuid": "c5b8a3e78af9421ea4f9402e6d23cb52",
+            "uuid": "896098eaa96e450d87a041164f5a7054"
+          }
+        ],
+        [
+          "USB Type A Male",
+          1,
+          "USB-A-TH_48037-0001",
+          "USB1",
+          {
+            "BOM_Supplier Part": "C112454",
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "SOFNG",
+            "BOM_Manufacturer Part": "USB-05",
+            "puuid": "d5ec045f9dc74f769c9e36bdbc34e1d6",
+            "uuid": "b5ed86d39d0a42bc82816ace2cb91361"
+          }
+        ]
+      ],
+      "updateTime": 1629970462,
+      "createTime": 1627227671,
+      "histories": [],
+      "created_at": "2021-07-25 16:41:11",
+      "updated_at": "2021-08-26 10:34:22"
+    },
+    {
+      "uuid": "66523dff396f5be55c409198b43df069",
+      "title": "pcb_design",
+      "filename": "pcb_design.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "17eda053266b4cdca86c67384ca2b6c2": 2,
+        "9113d2c51a594771a42e03539b691133": 2,
+        "e27e43a87233424da496ee2ae00cee25": 1,
+        "8f78b31c15d54ef69278fa188fb193ea": 4,
+        "5c0be672313e4206a41dd5398a02f108": 2,
+        "84f1ed3c8ee94504833047c26b4d21a2": 3,
+        "c96297339c4946d188c4bd2d3145f8e6": 1
+      },
+      "BOM": [],
+      "updateTime": 1627226108,
+      "createTime": 1617236477,
+      "histories": [],
+      "created_at": "2021-04-01 01:21:17",
+      "updated_at": "2021-07-25 16:15:08"
+    }
+  ],
+  "sort": [
+    "dd2c424620ebb61f9dad799e5d9e27c2",
+    "0ae1ffea7f3164545a7a307a0ddc8b61"
+  ],
+  "title": "schematics_quadruple_tank_setup",
+  "foldername": "schematics_quadruple_tank_setup",
+  "schfilename": "schematics_quadruple_tank_setup.json",
+  "schfilemtime": 1629970462685
+}
