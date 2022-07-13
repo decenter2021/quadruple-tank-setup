@@ -100,7 +100,7 @@ Below the parts are listed among categories, with correponding cost as of **2021
 
 ### 💎 Acrylic
 
-Part | Technical drawing  | Quantity | Cost
+Part | Technical drawing  | Quantity | Total cost
 :---|:---|:---:|:---:
 Reservoir | [bottom_tank.pdf](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/technical-drawings/bottom_tank.pdf) | 1 | 39€
 Cylindrical tank with base | [tank_small.pdf](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/technical-drawings/tank_small.pdf) / [tank_large.pdf](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/technical-drawings/tank_large.pdf) | 4 | 133€
@@ -113,7 +113,7 @@ Cylindrical tube for sensor support | [sensor_tube.pdf](https://github.com/decen
 
 ### 🔩 Structural
 
-Part | Quantity | Cost
+Part | Quantity | Total cost
 :---|:---:|:---:
 Zinc-plated threaded steel rod M8 x 1000mm | 5 | 5€
 ISO 4034 - M8 Hexagon Nut | 60 | 2€
@@ -135,7 +135,7 @@ Teflon tape 12 m | 2 | 1€
 
 ### 🖨️ 3D printed 
 
-Part | Solid Edge part file | Quantity | Cost
+Part | Solid Edge part file | Quantity | Total cost
 :---|:---|:---:|:---:
 Rod support | [rod_base.par](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/3d-printing-parts) | 5 | 1.5€
 Nut (Three-way valve) | [nut_diverting.par](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/3d-printing-parts) | 2 | 0.5€ 
@@ -154,7 +154,7 @@ Flexible tube spacer D12 | [tube_support_large.par](https://github.com/decenter2
 
 ### 🔌 Connectors
 
-Part | Quantity | Cost
+Part | Quantity | Total cost
 :---|:---:|:---:
 USB 2.0 A - mini USB B cable | 1 | 2€
 Multifilar 0.5mm$^2$ black wire - 5m | 1 | 7€
@@ -177,7 +177,7 @@ NDR-T NINIGI contact | 12 | 1.5€
 15-pin 2.54mm single row female pin header | 2 | 1€
 
 ### ⚡ Electronics
-Part | Quantity | Cost
+Part | Quantity | Total cost
 :---|:---:|:---:
 Arduino Nano | 1 | 7€
 Continuous Fluid Level Sensor PN-12110215TC-12 | 4 | 136€
