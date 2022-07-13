@@ -1,7 +1,5 @@
 # [Major revision in progress]Quadruple-Tank Setup <br><sub> ⚗️ Reproducible Low-cost Flexible Quadruple-Tank Process Experimental Setup for Control Educators, Practitioners, and Researchers</sub> 
 
-
-
 [![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://github.com/decenter2021/SAFFRON/releases)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/decenter2021/quadruple-tank-setup/blob/readme/LICENSE)
 [![DOI:[not_published_yet]](https://zenodo.org/badge/DOI/not_published_yet.svg)](https://doi.org/not_published_yet.svg)
@@ -23,6 +21,8 @@ CAD model             |  Physical implementation
   - MATLAB/Simulink interface
   - Assembly tutorials
 - Several application **examples**
+- *[Specify application eamples here]*
+- *[Flexibility]*
 
 ***
 ## 🚀 Index
@@ -30,7 +30,9 @@ CAD model             |  Physical implementation
 - [Description](#-description)
 - [Authors](#-authors)
 - [Contact](#-contact)
-- [Examples](%EF%B8%8F-examples)
+- [Manual](#-manual)
+- [Examples](#%EF%B8%8F-examples)
+- [Parts list](#parts-list)
 - [Contributing](#-contributing)
 - [Lincense](#-license)
 - [References](#-references)
@@ -70,6 +72,10 @@ This repository is currently maintained by Leonardo Pedroso (<a href="mailto:leo
 
 ***
 
+## 📚 Manual
+
+***
+
 ## ⛳️ Examples
 
 <p align="justify">
@@ -83,6 +89,10 @@ PI Control Example | <a href="https://www.youtube.com/watch?v=r2xKSpMdZIU"><img 
 Frequency Response Example | <a href="https://www.youtube.com/watch?v=jRHPns1iMps"><img src="https://user-images.githubusercontent.com/40807922/163650886-a79de64e-970b-4af1-92a2-a5f4cea1f8fb.png" width="80%" /></a>
 LQR Control Example | <a href="https://www.youtube.com/watch?v=Tk9IJJCzURs"><img src="https://user-images.githubusercontent.com/40807922/163651541-476bd066-3dea-4e89-b7f1-8f1a0621f1a3.png" width="80%" /></a>
 Decentralized LQR Control Example | <a href="https://www.youtube.com/watch?v=NA25sSz-3jE"><img src="https://user-images.githubusercontent.com/40807922/163650886-a79de64e-970b-4af1-92a2-a5f4cea1f8fb.png" width="80%" /></a>
+
+***
+
+## ⚙️ Parts list
 
 ***
 
