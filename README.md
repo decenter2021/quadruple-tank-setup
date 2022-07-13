@@ -74,6 +74,31 @@ This repository is currently maintained by Leonardo Pedroso (<a href="mailto:leo
 
 ## 📚 Manual
 
+The **simulink block** for interfacing with the quadruple-tank process experimental network is shown below. The **inputs and outputs** are thoroughly described in <a href="#-references">(Pedroso and Batista, 2022)</a>. 
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/40807922/178805687-0e0324f4-316a-4057-89fc-b665e4af53d4.png" width="25%" /> 
+ </p>
+
+To create a **new model** to control the quadruple-tank experimental setup, follow these steps:
+- Copy and paste the interface block in a new Simulink model;
+- Copy and paste, in the directory of the new Simulink model, the file: 
+  - `quadrupleLoadParameters.m`, which is executed on the initialization callback of the interface block, that loads the physical parameters of the setup, defines the sampling period, and defines the covariance matrices of the process and sensor noise for numerical simulation;
+  - `quadrupleSimObj.m`, a MATLAB System Object that numerically simulates the quadruple-tank process in discrete-time;
+- Create a directory `identification` to contain the `.mat` data files generated in the [identification procedure](#-identification);
+- Generate and connect to the interface block a clock signal `CLK`, whose period equals the sampling period defined in `quadrupleLoadParameters.m`;
+- Setup the Simulink solver to:
+  - Fixed-step;
+  - Discrete; and
+  - Set the "Fixed-step size" parameter to half the period of the `CLK` signal;
+- Set the Simulink simulation mode to "Accelerator";
+- Enable the display of the "Sorted Execution Order" of Simulink to ensure the first step of the feedback loop is the water level measurement and the last is the update of the input to the pumps. Most of the time this is ensured, due to the default priorities of the inner blocks of the interface block, otherwise set the priorities of the feedback loop blocks appropriately.
+
+
+***
+
+## 🧐 Identification
+
 ***
 
 ## ⛳️ Examples
