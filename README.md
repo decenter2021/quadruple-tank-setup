@@ -99,6 +99,31 @@ To create a **new model** to control the quadruple-tank experimental setup, foll
 
 ## 🧐 Identification
 
+The **proposed identification** procedures are detailled in what follows. For the detailled equations and physical principles used to estimate the parameters of the experimental setup making use of data gathered during these procedures see <a href="#-references">(Pedroso and Batista, 2022)</a>. 
+
+### 1. Section area of each tank
+
+The proposed procedure is the following: 
+- measure the weight of the empty tank, $w_1$ (one may want to add a little of water at the beginning for the water level to reach the scale at a water level $h_1$)
+- pour water in each tank until almost full
+- measure the weight of the tank with the water, $w_2$;
+- measure the corresponding water level, $h_2$;
+- then compute $A = (w_2-w_1)/\left(\rho(h_2-h_1)\right)$, where $\rho$ is the water density. 
+
+### 2. Characteristic slope of the water level sensors
+
+The proposed procedure to determine $dh/dr$ is the following: 
+- open `identification_sl.slx` 
+
+and for each tank: 
+
+1. block the outlet of tank;
+2. pour some water to the tanks with the pumps using the sliders in the Simulink model;
+3. measure $r$ in the Simulink scope and the water level in the sensor ruler $h^{\star}$;
+4. repeat 2. and 3. increasing the water level and measuring the pairs $(r,h^{\star})$, until enough samples are taken;
+5. compute an estimate of $dh/dr$ performing a linear regression of the samples taken.
+
+
 ***
 
 ## ⛳️ Examples
