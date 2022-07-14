@@ -29,15 +29,16 @@ CAD model             |  Physical implementation
 ***
 ## 🚀 Index
 
-- [Description](#-description)
-- [Authors](#-authors)
-- [Contact](#-contact)
-- [Manual](#-manual)
-- [Examples](#%EF%B8%8F-examples)
-- [Parts list](#%EF%B8%8F-parts-list)
-- [Contributing](#-contributing)
-- [Lincense](#-license)
-- [References](#-references)
+- 💡 [Description](#-description)
+- ✍🏼 [Authors](#-authors)
+- 📞 [Contact](#-contact)
+- 📚 [Manual](#-manual)
+- 🧐 [Identification](#-identification)
+- ⛳️ [Examples](#%EF%B8%8F-examples)
+- ⚙️ [Parts list](#%EF%B8%8F-parts-list)
+- ✨ [Contributing](#-contributing)
+- 📄 [Lincense](#-license)
+- 💥 [References](#-references)
 
 ***
 
