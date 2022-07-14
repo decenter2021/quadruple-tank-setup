@@ -1,5 +1,7 @@
 # [Major revision in progress] Quadruple-Tank Setup <br><sub> ⚗️ Reproducible Low-cost Flexible Quadruple-Tank Process Experimental Setup for Control Educators, Practitioners, and Researchers</sub> 
 
+equation numbering 
+
 [![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://github.com/decenter2021/SAFFRON/releases)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/decenter2021/quadruple-tank-setup/blob/readme/LICENSE)
 [![DOI:[not_published_yet]](https://zenodo.org/badge/DOI/not_published_yet.svg)](https://doi.org/not_published_yet.svg)
@@ -101,6 +103,10 @@ To create a **new model** to control the quadruple-tank experimental setup, foll
 
 The **proposed identification** procedures are detailled in what follows. For the detailled equations and physical principles used to estimate the parameters of the experimental setup making use of data gathered during these procedures see <a href="#-references">(Pedroso and Batista, 2022)</a>. 
 
+>**Note**
+> 
+> **MATLAB live scripts** detailing the **identification procedure** as well as the **post-processing** of the data to estimate the model parameters are avialable at [simulink/identification](https://github.com/decenter2021/quadruple-tank-setup/tree/master/simulink/identification)
+
 ### 1. Section area of each tank
 
 The proposed procedure is the following: 
@@ -109,6 +115,9 @@ The proposed procedure is the following:
 - measure the weight of the tank with the water, $w_2$;
 - measure the corresponding water level, $h_2$;
 - then compute $A = (w_2-w_1)/\left(\rho(h_2-h_1)\right)$, where $\rho$ is the water density. 
+
+The MATLAB live script `identification_1_A.mlx` corresponding to this identification procedure is available at [simulink/identification](https://github.com/decenter2021/quadruple-tank-setup/tree/master/simulink/identification).
+
 
 ### 2. Characteristic slope of the water level sensors
 
@@ -123,6 +132,52 @@ and for each tank:
 4. repeat 2. and 3. increasing the water level and measuring the pairs $(r,h^{\star})$, until enough samples are taken;
 5. compute an estimate of $dh/dr$ performing a linear regression of the samples taken.
 
+The plot of the data points and linear regression for an illustrative identification procedure is depicted in  <a href="#-references">(Pedroso and Batista, 2022)</a>. 
+
+The MATLAB live script `identification_2_dh_dr.mlx` corresponding to this identification procedure is available at [simulink/identification](https://github.com/decenter2021/quadruple-tank-setup/tree/master/simulink/identification).
+
+### 3. Response of the pumps and the fraction of the flow that is diverted on the three way valves
+
+The following procedure is proposed:
+- open `identification_sl.slx`
+
+and for each pump (the following steps are exemplified for pump 1):
+1. block the outlets of the lower tanks; 
+2. send a constant PWM input to pump 1; 
+3. wait until tank 1 is almost full, then turn off the pump;
+4. let tank 4 pour all the water into tank 2, whose outlet should still be blocked; 
+5. measure the height of the tanks 1 and 2 and, in the scope, measure the interval of time the pump was on;
+6. repeat 2., 3., 4., and 5. for various PWM values. 
+
+> **Warning**: 
+> 
+> The pumps are more sensitive to low PWM values, so a greater sample density in this region is beneficial. 
+
+From each sample taken:
+- one can compute the total volume of water that was pumped, $q = h_1A_1+h_2A_2$;
+- the fraction of the flow that was directed to the lower tank, $\gamma = h_1A_1/(h_1A_1+h_2A_2)$. 
+ 
+It is then possible to estimate $c_1,c_2,c_3,$ and $k$ from a nonlinear least squares regression, for instance, of model (X) in <a href="#-references">(Pedroso and Batista, 2022)</a>. 
+
+>**Note**
+>
+> Although this procedure is similar for the disturbance pumps, it is necessary to keep in mind that their identification depends on the height of the disturbance flow outlet. 
+
+The plot of the data points and linear regression for an illustrative identification procedure is depicted in  <a href="#-references">(Pedroso and Batista, 2022)</a>. 
+
+The MATLAB live script `identification_3_pump.mlx` corresponding to this identification procedure is available at [simulink/identification](https://github.com/decenter2021/quadruple-tank-setup/tree/master/simulink/identification).
+
+### 4. Outlet area $a$ and datum height $h_0$ of the tanks
+
+The proposed procedure to determine $a$ and $h_0$ is the following:
+- open `identification_sl.slx`
+ 
+and for each tank:
+- measure the steady-state resistor ratio value $r$ for various constant input actions $u$;
+- estimate $\alpha$ and $\beta$ from the linear regression of the samples $(r,u^2)$;
+- compute $a$ and $h_0$ making use of (X) in <a href="#-references">(Pedroso and Batista, 2022)</a>. 
+
+The MATLAB live script `identification_4_a.mlx` corresponding to this identification procedure is available at [simulink/identification](https://github.com/decenter2021/quadruple-tank-setup/tree/master/simulink/identification).
 
 ***
 
