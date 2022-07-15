@@ -1,7 +1,4 @@
-# [Major revision in progress] Quadruple-Tank Setup <br><sub> ⚗️ Reproducible Low-cost Flexible Quadruple-Tank Process Experimental Setup for Control Educators, Practitioners, and Researchers</sub> 
-
-equation numbering 
-add features
+# Quadruple-Tank Setup <br><sub> ⚗️ Reproducible Low-cost Flexible Quadruple-Tank Process Experimental Setup for Control Educators, Practitioners, and Researchers</sub> 
 
 [![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://github.com/decenter2021/SAFFRON/releases)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/decenter2021/quadruple-tank-setup/blob/readme/LICENSE)
@@ -13,19 +10,28 @@ CAD model             |  Physical implementation
 
 ***
 ## 🎯 Features
-- User-friendly dedicated **MATLAB/Simulink** interface with a personal computer<br>
-- Seamless shift between a **numeric simulation** and the **interface** with the real experimental plant<br>
-- **Inexpensive** materials and **fast assembly** <br>
-- **Open-source** <br>
-  - CAD models
+- 💻 User-friendly dedicated **MATLAB/Simulink** interface with a personal computer<br>
+- 📈 Seamless shift between a **numeric simulation** and the **interface** with the real experimental plant<br>
+- 💰 **Inexpensive** materials and **fast assembly** <br>
+- 🔓 **Open-source** <br>
+  - **CAD** models
   - Technical drawings
   - Wiring schematics
-  - PCB design
-  - MATLAB/Simulink interface
+  - **PCB** design
+  - **MATLAB/Simulink** interface
   - Assembly tutorials
-- Several application **examples**
-- *[Specify application eamples here]*
-- *[Flexibility]*
+- ⛳️ Several application **examples**
+- 👩‍🔬 Suitable for control **education** in
+  - System **identification**
+  - **Frequency/time** response
+  - **P**, **PI**, and **PID** controllers
+  - **Ziegler-Nichols** tuning procedure
+  - **Disturbance** rejection
+  - Effect of the position and direction of **zeros** (e.g. non-minimum phase zeros)
+  - **Multivariate** control (e.g. LQR)
+  - **Nonlinear** control
+  - **Decentralized** control
+
 
 ***
 ## 🚀 Index
