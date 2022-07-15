@@ -24,11 +24,12 @@ CAD model             |  Physical implementation
 - 👩‍🔬 Suitable for control **education** in
   - System **identification**
   - **Frequency/time** response
+  - State **feedback** (e.g root locus)
   - **P**, **PI**, and **PID** controllers
   - **Ziegler-Nichols** tuning procedure
   - **Disturbance** rejection
-  - Effect of the position and direction of **zeros** (e.g. non-minimum phase zeros)
   - **Multivariate** control (e.g. LQR)
+  - Effect of the position and direction of **zeros** (e.g. non-minimum phase zeros)
   - **Nonlinear** control
   - **Decentralized** control
 
