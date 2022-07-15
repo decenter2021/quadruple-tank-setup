@@ -1,6 +1,4 @@
-# Quadruple-Tank Setup <br><sub> ⚗️ Reproducible Low-cost Flexible Quadruple-Tank Process Experimental Setup for Control Educators, Practitioners, and Researchers</sub>
-
-
+# Quadruple-Tank Setup <br><sub> ⚗️ Reproducible Low-cost Flexible Quadruple-Tank Process Experimental Setup for Control Educators, Practitioners, and Researchers</sub> 
 
 [![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://github.com/decenter2021/SAFFRON/releases)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/decenter2021/quadruple-tank-setup/blob/readme/LICENSE)
@@ -12,28 +10,42 @@ CAD model             |  Physical implementation
 
 ***
 ## 🎯 Features
-- User-friendly dedicated **MATLAB/Simulink** interface with a personal computer<br>
-- Seamless shift between a **numeric simulation** and the **interface** with the real experimental plant<br>
-- **Inexpensive** materials and **fast assembly** <br>
-- **Open-source** <br>
-  - CAD models
+- 💻 User-friendly dedicated **MATLAB/Simulink** interface with a personal computer<br>
+- 📈 Seamless shift between a **numeric simulation** and the **interface** with the real experimental plant<br>
+- 💰 **Inexpensive** materials and **fast assembly** <br>
+- 🔓 **Open-source** <br>
+  - **CAD** models
   - Technical drawings
   - Wiring schematics
-  - PCB design
-  - MATLAB/Simulink interface
+  - **PCB** design
+  - **MATLAB/Simulink** interface
   - Assembly tutorials
-- Several application **examples**
+- ⛳️ Several application **examples**
+- 👩‍🔬 Suitable for control **education** in
+  - System **identification**
+  - **Frequency/time** response
+  - **P**, **PI**, and **PID** controllers
+  - **Ziegler-Nichols** tuning procedure
+  - **Disturbance** rejection
+  - Effect of the position and direction of **zeros** (e.g. non-minimum phase zeros)
+  - **Multivariate** control (e.g. LQR)
+  - **Nonlinear** control
+  - **Decentralized** control
+
 
 ***
 ## 🚀 Index
 
-- [Description](#-description)
-- [Authors](#-authors)
-- [Contact](#-contact)
-- [Examples](%EF%B8%8F-examples)
-- [Contributing](#-contributing)
-- [Lincense](#-license)
-- [References](#-references)
+- 💡 [Description](#-description)
+- ✍🏼 [Authors](#-authors)
+- 📞 [Contact](#-contact)
+- 📚 [Manual](#-manual)
+- 🧐 [Identification](#-identification)
+- ⛳️ [Examples](#%EF%B8%8F-examples)
+- ⚙️ [Parts list](#%EF%B8%8F-parts-list)
+- ✨ [Contributing](#-contributing)
+- 📄 [Lincense](#-license)
+- 💥 [References](#-references)
 
 ***
 
@@ -70,6 +82,113 @@ This repository is currently maintained by Leonardo Pedroso (<a href="mailto:leo
 
 ***
 
+## 📚 Manual
+
+The **simulink block** for interfacing with the quadruple-tank process experimental network is shown below. The **inputs and outputs** are thoroughly described in <a href="#-references">(Pedroso and Batista, 2022)</a>. 
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/40807922/178805687-0e0324f4-316a-4057-89fc-b665e4af53d4.png" width="25%" /> 
+ </p>
+
+To create a **new model** to control the quadruple-tank experimental setup, follow these steps:
+- Copy and paste the interface block in a new Simulink model;
+- Copy and paste, in the directory of the new Simulink model, the file: 
+  - `quadrupleLoadParameters.m`, which is executed on the initialization callback of the interface block, that loads the physical parameters of the setup, defines the sampling period, and defines the covariance matrices of the process and sensor noise for numerical simulation;
+  - `quadrupleSimObj.m`, a MATLAB System Object that numerically simulates the quadruple-tank process in discrete-time;
+- Create a directory `identification` to contain the `.mat` data files generated in the [identification procedure](#-identification);
+- Generate and connect to the interface block a clock signal `CLK`, whose period equals the sampling period defined in `quadrupleLoadParameters.m`;
+- Setup the Simulink solver to:
+  - Fixed-step;
+  - Discrete; and
+  - Set the "Fixed-step size" parameter to half the period of the `CLK` signal;
+- Set the Simulink simulation mode to "Accelerator";
+- Enable the display of the "Sorted Execution Order" of Simulink to ensure the first step of the feedback loop is the water level measurement and the last is the update of the input to the pumps. Most of the time this is ensured, due to the default priorities of the inner blocks of the interface block, otherwise set the priorities of the feedback loop blocks appropriately.
+
+
+***
+
+## 🧐 Identification
+
+The **proposed identification** procedures are detailled in what follows. For the detailled equations and physical principles used to estimate the parameters of the experimental setup making use of data gathered during these procedures see <a href="#-references">(Pedroso and Batista, 2022)</a>. 
+
+>**Note**
+> 
+> **MATLAB live scripts** detailing the **identification procedure** as well as the **post-processing** of the data to estimate the model parameters are avialable at [simulink/identification](https://github.com/decenter2021/quadruple-tank-setup/tree/master/simulink/identification)
+
+### 1. Section area of each tank
+
+The proposed procedure is the following: 
+- measure the weight of the empty tank, $w_1$ (one may want to add a little of water at the beginning for the water level to reach the scale at a water level $h_1$)
+- pour water in each tank until almost full
+- measure the weight of the tank with the water, $w_2$;
+- measure the corresponding water level, $h_2$;
+- then compute $A = (w_2-w_1)/\left(\rho(h_2-h_1)\right)$, where $\rho$ is the water density. 
+
+The MATLAB live script `identification_1_A.mlx` corresponding to this identification procedure is available at [simulink/identification](https://github.com/decenter2021/quadruple-tank-setup/tree/master/simulink/identification).
+
+
+### 2. Characteristic slope of the water level sensors
+
+The proposed procedure to determine $dh/dr$ is the following: 
+- open `identification_sl.slx` 
+
+and for each tank: 
+
+1. block the outlet of tank;
+2. pour some water to the tanks with the pumps using the sliders in the Simulink model;
+3. measure $r$ in the Simulink scope and the water level in the sensor ruler $h^{\star}$;
+4. repeat 2. and 3. increasing the water level and measuring the pairs $(r,h^{\star})$, until enough samples are taken;
+5. compute an estimate of $dh/dr$ performing a linear regression of the samples taken.
+
+The plot of the data points and linear regression for an illustrative identification procedure is depicted in  <a href="#-references">(Pedroso and Batista, 2022)</a>. 
+
+The MATLAB live script `identification_2_dh_dr.mlx` corresponding to this identification procedure is available at [simulink/identification](https://github.com/decenter2021/quadruple-tank-setup/tree/master/simulink/identification).
+
+### 3. Response of the pumps and the fraction of the flow that is diverted on the three way valves
+
+The following procedure is proposed:
+- open `identification_sl.slx`
+
+and for each pump (the following steps are exemplified for pump 1):
+1. block the outlets of the lower tanks; 
+2. send a constant PWM input to pump 1; 
+3. wait until tank 1 is almost full, then turn off the pump;
+4. let tank 4 pour all the water into tank 2, whose outlet should still be blocked; 
+5. measure the height of the tanks 1 and 2 and, in the scope, measure the interval of time the pump was on;
+6. repeat 2., 3., 4., and 5. for various PWM values. 
+
+> **Warning**: 
+> 
+> The pumps are more sensitive to low PWM values, so a greater sample density in this region is beneficial. 
+
+From each sample taken:
+- one can compute the total volume of water that was pumped, $q = h_1A_1+h_2A_2$;
+- the fraction of the flow that was directed to the lower tank, $\gamma = h_1A_1/(h_1A_1+h_2A_2)$. 
+ 
+It is then possible to estimate $c_1,c_2,c_3,$ and $k$ from a nonlinear least squares regression, for instance, of model (3) in <a href="#-references">(Pedroso and Batista, 2022)</a>. 
+
+>**Note**
+>
+> Although this procedure is similar for the disturbance pumps, it is necessary to keep in mind that their identification depends on the height of the disturbance flow outlet. 
+
+The plot of the data points and linear regression for an illustrative identification procedure is depicted in  <a href="#-references">(Pedroso and Batista, 2022)</a>. 
+
+The MATLAB live script `identification_3_pump.mlx` corresponding to this identification procedure is available at [simulink/identification](https://github.com/decenter2021/quadruple-tank-setup/tree/master/simulink/identification).
+
+### 4. Outlet area $a$ and datum height $h_0$ of the tanks
+
+The proposed procedure to determine $a$ and $h_0$ is the following:
+- open `identification_sl.slx`
+ 
+and for each tank:
+- measure the steady-state resistor ratio value $r$ for various constant input actions $u$;
+- estimate $\alpha$ and $\beta$ from the linear regression of the samples $(r,u^2)$;
+- compute $a$ and $h_0$ making use of (6) in <a href="#-references">(Pedroso and Batista, 2022)</a>. 
+
+The MATLAB live script `identification_4_a.mlx` corresponding to this identification procedure is available at [simulink/identification](https://github.com/decenter2021/quadruple-tank-setup/tree/master/simulink/identification).
+
+***
+
 ## ⛳️ Examples
 
 <p align="justify">
@@ -83,6 +202,106 @@ PI Control Example | <a href="https://www.youtube.com/watch?v=r2xKSpMdZIU"><img 
 Frequency Response Example | <a href="https://www.youtube.com/watch?v=jRHPns1iMps"><img src="https://user-images.githubusercontent.com/40807922/163650886-a79de64e-970b-4af1-92a2-a5f4cea1f8fb.png" width="80%" /></a>
 LQR Control Example | <a href="https://www.youtube.com/watch?v=Tk9IJJCzURs"><img src="https://user-images.githubusercontent.com/40807922/163651541-476bd066-3dea-4e89-b7f1-8f1a0621f1a3.png" width="80%" /></a>
 Decentralized LQR Control Example | <a href="https://www.youtube.com/watch?v=NA25sSz-3jE"><img src="https://user-images.githubusercontent.com/40807922/163650886-a79de64e-970b-4af1-92a2-a5f4cea1f8fb.png" width="80%" /></a>
+
+***
+
+## ⚙️ Parts list
+
+The full parts list is availble in **spreadsheet** format in [bill-of-materials/bill-of-materials.xlsx](https://github.com/decenter2021/quadruple-tank-setup/tree/master/bill-of-materials). 
+
+Below the parts are listed among categories, with correponding cost as of **2021**. The total cost is **under 650€**.
+
+### 💎 Acrylic
+
+Part | Technical drawing  | Quantity | Total cost
+:---|:---|:---:|:---:
+Reservoir | [bottom_tank.pdf](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/technical-drawings/bottom_tank.pdf) | 1 | 39€
+Cylindrical tank with base | [tank_small.pdf](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/technical-drawings/tank_small.pdf) / [tank_large.pdf](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/technical-drawings/tank_large.pdf) | 4 | 133€
+Slab \#1 | [slab_1.pdf](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/technical-drawings/slab_1.pdf) | 1 | 8€
+Slab \#2 | [slab_2.pdf](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/technical-drawings/slab_2.pdf) | 1 | 8€
+Slab \#3 | [slab_3.pdf](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/technical-drawings/slab_3.pdf) | 1 | 8€
+Slab \#4 | [slab_4.pdf](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/technical-drawings/slab_4.pdf) | 1 | 8€
+Slab \#5 | [slab_5.pdf](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/technical-drawings/slab_5.pdf) | 1 | 8€
+Cylindrical tube for sensor support | [sensor_tube.pdf](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/technical-drawings/sensor_tube.pdf) | 4 | 11€
+
+### 🔩 Structural
+
+Part | Quantity | Total cost
+:---|:---:|:---:
+Zinc-plated threaded steel rod M8 x 1000mm | 5 | 5€
+ISO 4034 - M8 Hexagon Nut | 60 | 2€
+ISO 7093 - 8 Washer | 45 | 9€
+ISO 7091 - 8 Washer | 15 | 2€
+ISO 4015 - M4 x 20mm Hexagon Head bolt  | 32 | 3€
+ISO 4035 - M4 Hexagon thin nuts chamfered | 32 | 2€
+ISO 7092 - 4 Washer  | 64 | 3€
+M3 x 15mm Hex Spacer Female-Female | 12 | 3€	
+ISO 7045 - M3 x 14mm bolt | 12 | 2€
+ISO 7045 - M3 x 6mm bolt | 12 | 2€
+Transparent flexible tubing 8mm x 11mm x 5000mm | 1 | 6€
+Transparent flexible tubing 12mm x 16mm x 5000mm | 1 | 10€
+Suction cup | 2 | 2€
+Rubber Washer 8mm x 14mm x 2mm |  2 | 0.5€
+Rubber Washer 9mm x 14mm x 2mm | 4 | 1€
+Rubber Washer 8mm x 12mm x 2mm | 4 | 1€
+Teflon tape 12 m | 2 | 1€
+
+### 🖨️ 3D printed 
+
+Part | Solid Edge part file | Quantity | Total cost
+:---|:---|:---:|:---:
+Rod support | [rod_base.par](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/3d-printing-parts) | 5 | 1.5€
+Nut (Three-way valve) | [nut_diverting.par](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/3d-printing-parts) | 2 | 0.5€ 
+Pin (Three-way valve) | [regulator_pin_diverting.par](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/3d-printing-parts) | 2 | 0.5€
+Body (Three-way valve) | [body_diverting.par](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/3d-printing-parts) | 2 | 1€
+Nut (Upper/lower tank outlet valve) | [nutStraight.par](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/3d-printing-parts) | 4 | 0.5€
+Pin (Upper/lower tank outlet valve) | [regulator_pin3_straight.par](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/3d-printing-parts) | 4 | 0.5€
+Body (Upper tank outlet valve) | [body3_straight.par](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/3d-printing-parts) | 2 | 0.5€
+Body (Lower tank outlet valve) | [body3_straight_bottom.par](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/3d-printing-parts) | 2 | 0.5€ 
+Upper tank cap | [cap_tank_small.par](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/3d-printing-parts) | 2 | 2€
+Lower tank cap | [cap_tank_large.par](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/3d-printing-parts) | 2 | 2€	
+Sensor mount | [sensor_support.par](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/3d-printing-parts) | 8 | 2€
+Flexible tube spacer D8 | [tube_support.par](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/3d-printing-parts) | 4 | 0.5€
+Flexible tube spacer D12 | [tube_support_large.par](https://github.com/decenter2021/quadruple-tank-setup/tree/master/cad-quadruple-tank/3d-printing-parts) | 1 | 0.5€
+
+
+### 🔌 Connectors
+
+Part | Quantity | Total cost
+:---|:---:|:---:
+USB 2.0 A - mini USB B cable | 1 | 2€
+Multifilar 0.5mm$^2$ black wire - 5m | 1 | 7€
+Multifilar 0.5mm$^2$ red wire - 5m | 1 | 7€
+Multifilar 0.14mm$^2$ black wire - 5m | 1 | 3€
+Multifilar 0.14mm$^2$ red wire - 5m | 1 | 3€
+Multifilar 0.14mm$^2$ white wire - 5m | 1 | 3€
+5.5/2.1mm male DC plug | 1 | 0.5€
+5.5/2.1/14mm female DC plug | 4 | 1€
+NS25-G3 NINIGI plug | 2 | 0.5€
+NS25-G4 NINIGI plug | 8 | 1€
+NS25-G6 NINIGI plug | 3 | 0.5€
+NS25-T NINIGI contact | 56 | 3€
+NS25-W3P NINIGI socket | 2 | 0.5€
+NS25-W4P NINIGI socket | 4 | 1€
+NS25-W6P NINIGI socket | 3 | 1€
+NSR-06 NINIGI plug | 2 | 0.5€
+NDR-T NINIGI contact | 12 | 1.5€
+10-pin 2.54mm single row female pin header | 2 | 0.5€
+15-pin 2.54mm single row female pin header | 2 | 1€
+
+### ⚡ Electronics
+Part | Quantity | Total cost
+:---|:---:|:---:
+Arduino Nano | 1 | 7€
+Continuous Fluid Level Sensor PN-12110215TC-12 | 4 | 136€
+VMA421 water pump | 4 | 72€
+100uF 25V electrolytic capacitor | 4 | 0.5€
+L298N Dual H-Bridge Driver | 2 | 9€
+ADS 1115 ADC | 2 | 20€
+14VDC 2.5A 35W power supply | 1 | 21€
+Bi-stable emergency button | 1 | 12€
+L7805ACP voltage regulator | 1 | 3€
+Custom PCB with connectors | 1 | 35€
 
 ***
 
