@@ -159,7 +159,7 @@ From each sample taken:
 - one can compute the total volume of water that was pumped, $q = h_1A_1+h_2A_2$;
 - the fraction of the flow that was directed to the lower tank, $\gamma = h_1A_1/(h_1A_1+h_2A_2)$. 
  
-It is then possible to estimate $c_1,c_2,c_3,$ and $k$ from a nonlinear least squares regression, for instance, of model (X) in <a href="#-references">(Pedroso and Batista, 2022)</a>. 
+It is then possible to estimate $c_1,c_2,c_3,$ and $k$ from a nonlinear least squares regression, for instance, of model (3) in <a href="#-references">(Pedroso and Batista, 2022)</a>. 
 
 >**Note**
 >
@@ -177,7 +177,7 @@ The proposed procedure to determine $a$ and $h_0$ is the following:
 and for each tank:
 - measure the steady-state resistor ratio value $r$ for various constant input actions $u$;
 - estimate $\alpha$ and $\beta$ from the linear regression of the samples $(r,u^2)$;
-- compute $a$ and $h_0$ making use of (X) in <a href="#-references">(Pedroso and Batista, 2022)</a>. 
+- compute $a$ and $h_0$ making use of (6) in <a href="#-references">(Pedroso and Batista, 2022)</a>. 
 
 The MATLAB live script `identification_4_a.mlx` corresponding to this identification procedure is available at [simulink/identification](https://github.com/decenter2021/quadruple-tank-setup/tree/master/simulink/identification).
 
