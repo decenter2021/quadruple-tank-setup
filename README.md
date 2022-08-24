@@ -1,8 +1,6 @@
 # Quadruple-Tank Setup <br><sub> ⚗️ Reproducible Low-cost Flexible Quadruple-Tank Process Experimental Setup for Control Educators, Practitioners, and Researchers</sub> 
 
-[![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://github.com/decenter2021/SAFFRON/releases)
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/decenter2021/quadruple-tank-setup/blob/readme/LICENSE)
-[![DOI:[not_published_yet]](https://zenodo.org/badge/DOI/not_published_yet.svg)](https://doi.org/not_published_yet.svg)
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 <img src="https://user-images.githubusercontent.com/40807922/163567003-0c99b331-ad43-42da-af84-5637b5629d2c.png" width="100%" /> |   <img src="https://user-images.githubusercontent.com/40807922/163566465-bf311f1e-8831-4145-b541-65d9046de89c.png" width="100%" /> 
 :-------------------------:|:-------------------------:
@@ -322,7 +320,10 @@ To contribute
 ***
 
 ## 📄 License
-[MIT License](https://github.com/decenter2021/quadruple-tank-setup/blob/readme/LICENSE)
+
+This work is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode) License. 
+
+![](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-nd.svg)
 
 ***
 
