@@ -43,7 +43,7 @@ CAD model             |  Physical implementation
 - ⛳️ [Examples](#%EF%B8%8F-examples)
 - ⚙️ [Parts list](#%EF%B8%8F-parts-list)
 - ✨ [Contributing](#-contributing)
-- 📄 [Lincense](#-license)
+- 📄 [License](#-license)
 - 💥 [References](#-references)
 
 ***
