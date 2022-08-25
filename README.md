@@ -1,6 +1,6 @@
 # Quadruple-Tank Setup <br><sub> ⚗️ Reproducible Low-cost Flexible Quadruple-Tank Process Experimental Setup for Control Educators, Practitioners, and Researchers</sub> 
 
-[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
 <img src="https://user-images.githubusercontent.com/40807922/163567003-0c99b331-ad43-42da-af84-5637b5629d2c.png" width="100%" /> |   <img src="https://user-images.githubusercontent.com/40807922/163566465-bf311f1e-8831-4145-b541-65d9046de89c.png" width="100%" /> 
 :-------------------------:|:-------------------------:
@@ -321,9 +321,10 @@ To contribute
 
 ## 📄 License
 
-This work is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode) License. 
+This work is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International Public
+License](https://creativecommons.org/licenses/by-nc/4.0/legalcode).
 
-![](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-nd.svg)
+![](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc.svg)
 
 ***
 
