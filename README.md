@@ -1,6 +1,7 @@
 # Quadruple-Tank Setup <br><sub> ⚗️ Reproducible Low-cost Flexible Quadruple-Tank Process Experimental Setup for Control Educators, Practitioners, and Researchers</sub> 
 
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+[![DOI:10.1016/j.jprocont.2022.08.010](https://zenodo.org/badge/DOI/10.1016/j.jprocont.2022.08.010.svg)](https://doi.org/10.1016/j.jprocont.2022.08.010)
 
 <img src="https://user-images.githubusercontent.com/40807922/163567003-0c99b331-ad43-42da-af84-5637b5629d2c.png" width="100%" /> |   <img src="https://user-images.githubusercontent.com/40807922/163566465-bf311f1e-8831-4145-b541-65d9046de89c.png" width="100%" /> 
 :-------------------------:|:-------------------------:
@@ -58,10 +59,10 @@ The major hurdle in accessing laboratory experimentation is the <b>cost of acqui
 The Quadruple-Tank Setup is thoroughly described in 
 </p>
 <p align="justify">
-<a href="">Pedroso, L., Batista, P. (2022) Reproducible Low-cost Flexible Quadruple-Tank Process Experimental Setup for Control Educators, Practitioners, and Researchers [not published yet]</a>
+<a href="https://www.sciencedirect.com/science/article/pii/S0959152422001524">L. Pedroso, P. Batista, Reproducible low-cost flexible quadruple-tank process experimental setup for control educators, practitioners, and researchers, Journal of Process Control. 118 (2022) 82–94.</a>  | <a href="https://github.com/decenter2021/quadruple-tank-setup/files/9508256/lpedroso_pbatista_jpc.pdf">[Download PDF]</a>
 </p>
 
-If you use this repository, reference the publication above.
+If you use this repository, please [reference](#-references) the publication above.
 
 
 
@@ -331,6 +332,20 @@ License](https://creativecommons.org/licenses/by-nc/4.0/legalcode).
 ## 💥 References 
 <p align="justify">
 
-<a href="">Pedroso, L., Batista, P. (2022) Reproducible Low-cost Flexible Quadruple-Tank Process Experimental Setup for Control Educators, Practitioners, and Researchers [not published yet]</a>
-
+<a href="https://www.sciencedirect.com/science/article/pii/S0959152422001524">L. Pedroso, P. Batista, Reproducible low-cost flexible quadruple-tank process experimental setup for control educators, practitioners, and researchers, Journal of Process Control. 118 (2022) 82–94.</a> | <a href="https://github.com/decenter2021/quadruple-tank-setup/files/9508256/lpedroso_pbatista_jpc.pdf">[Download PDF]</a>
 </p>
+
+
+~~~BibTeX
+@article{LPedrosoPBatista2022,
+	title = {Reproducible low-cost flexible quadruple-tank process experimental setup for control educators, practitioners, and researchers},
+	journal = {Journal of Process Control},
+	volume = {118},
+	pages = {82-94},
+	year = {2022},
+	issn = {0959-1524},
+	doi = {https://doi.org/10.1016/j.jprocont.2022.08.010},
+	author = {Leonardo Pedroso and Pedro Batista}
+}
+~~~
+
