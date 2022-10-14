@@ -197,11 +197,12 @@ The source files of the applications described in <a href="#-references">(Pedros
 
 Description             |  Video
 :-------------------------:|:-------------------------:
-3D Printed Valve Assembly Tutorial | <a href="https://www.youtube.com/watch?v=pIbw3Wvdszw"><img src="https://user-images.githubusercontent.com/40807922/163651252-2209618e-cd7d-4c94-bd00-5b37f622e6db.png" width="80%" /></a>
-PI Control Example | <a href="https://www.youtube.com/watch?v=r2xKSpMdZIU"><img src="https://user-images.githubusercontent.com/40807922/163651390-56039e46-3c19-4354-8ae3-b6aff416eb6e.png" width="80%" /></a>
-Frequency Response Example | <a href="https://www.youtube.com/watch?v=jRHPns1iMps"><img src="https://user-images.githubusercontent.com/40807922/163650886-a79de64e-970b-4af1-92a2-a5f4cea1f8fb.png" width="80%" /></a>
-LQR Control Example | <a href="https://www.youtube.com/watch?v=Tk9IJJCzURs"><img src="https://user-images.githubusercontent.com/40807922/163651541-476bd066-3dea-4e89-b7f1-8f1a0621f1a3.png" width="80%" /></a>
-Decentralized LQR Control Example | <a href="https://www.youtube.com/watch?v=NA25sSz-3jE"><img src="https://user-images.githubusercontent.com/40807922/163650886-a79de64e-970b-4af1-92a2-a5f4cea1f8fb.png" width="80%" /></a>
+Promotional video | <a href="https://www.youtube.com/watch?v=-mkMukfFTuA&list=PLj6JXRV4qcgboMBOonhQY3f7nb1WQ0N1v"><img src="https://user-images.githubusercontent.com/40807922/195855266-5d961dda-16b1-4e6a-8238-6025d5474660.png" width="80%" /></a>
+PI Control Example | <a href="https://www.youtube.com/watch?v=r2xKSpMdZIU&list=PLj6JXRV4qcgboMBOonhQY3f7nb1WQ0N1v&index=2"><img src="https://user-images.githubusercontent.com/40807922/163651390-56039e46-3c19-4354-8ae3-b6aff416eb6e.png" width="80%" /></a>
+Frequency Response Example | <a href="https://www.youtube.com/watch?v=jRHPns1iMps&list=PLj6JXRV4qcgboMBOonhQY3f7nb1WQ0N1v&index=3"><img src="https://user-images.githubusercontent.com/40807922/163650886-a79de64e-970b-4af1-92a2-a5f4cea1f8fb.png" width="80%" /></a>
+LQR Control Example | <a href="https://www.youtube.com/watch?v=Tk9IJJCzURs&list=PLj6JXRV4qcgboMBOonhQY3f7nb1WQ0N1v&index=4"><img src="https://user-images.githubusercontent.com/40807922/163651541-476bd066-3dea-4e89-b7f1-8f1a0621f1a3.png" width="80%" /></a>
+Decentralized LQR Control Example | <a href="https://www.youtube.com/watch?v=NA25sSz-3jE&list=PLj6JXRV4qcgboMBOonhQY3f7nb1WQ0N1v&index=5"><img src="https://user-images.githubusercontent.com/40807922/163650886-a79de64e-970b-4af1-92a2-a5f4cea1f8fb.png" width="80%" /></a>
+3D Printed Valve Assembly Tutorial | <a href="https://www.youtube.com/watch?v=pIbw3Wvdszw&list=PLj6JXRV4qcgboMBOonhQY3f7nb1WQ0N1v&index=6"><img src="https://user-images.githubusercontent.com/40807922/163651252-2209618e-cd7d-4c94-bd00-5b37f622e6db.png" width="80%" /></a>
 
 ***
 
